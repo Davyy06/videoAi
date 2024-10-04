@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espero que goste, Pequena 💜</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #4B0082, #000428);
+            color: white;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            overflow-y: auto;
+            position: relative;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #logo {
+            margin-top: 20px;
+            width: 150px;
+            animation: logoAnimation 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes logoAnimation {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        h1 {
+            margin-top: 10px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 2.5rem;
+            color: #ffcc00;
+            text-shadow: 2px 2px 5px #000000;
+            animation: fadeIn 3s ease-out;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            height: auto;
+            max-width: 100%;
+            margin: 20px auto;
+        }
+
+        video {
+            border: 2px solid #ff4500;
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+            max-width: 700px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        video:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #ccc;
+            font-family: 'Verdana', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .star {
+            position: absolute;
+            border-radius: 50%;
+            background: white;
+            opacity: 0.8;
+            animation: twinkle 1.5s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img id="logo" src="seu-logo.png" alt="Logo"> <!-- Substitua pelo caminho do seu logo -->
+    <h1>Espero que goste, Pequena 💜</h1>
+
+    <div class="video-container" id="videoContainer">
+        <video controls>
+            <source src="1video.mp4.mp4" type="video/mp4"> <!-- Substitua pelo seu vídeo -->
+            Seu navegador não suporta vídeos.
+        </video>
+    </div>
+
+    <footer>
+        <p>Sei que às vezes posso parecer chato ou irritante, mas isso é só para lembrar que ficarei com você até o fim, ou seja, quando estiver cansada, feliz, surtando, triste, mas não te deixarei e farei de tudo ao meu alcance para arrancar um sorriso teu.</p>
+    </footer>
+
+    <script>
+        const body = document.body;
+
+        for (let i = 0; i < 150; i++) { // Cria 150 estrelas
+            const star = document.createElement('div');
+            star.classList.add('star');
+            const size = Math.random() * 5 + 2; // Tamanho aleatório entre 2 e 7px
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${Math.random() * 100}vw`; // Posição aleatória na largura da tela
+            star.style.top = `${Math.random() * 100}vh`; // Posição aleatória na altura da tela
+            star.style.animationDuration = `${Math.random() * 2 + 1.5}s`; // Duração aleatória da animação
+            body.appendChild(star);
+        }
+    </script>
+</body>
+</html>
